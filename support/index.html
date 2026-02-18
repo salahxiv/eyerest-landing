@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & Contact — EyeRest</title>
+    <meta name="description" content="Get help with EyeRest - Smart Eye Break Reminders. Contact support, FAQ, and bug reports.">
+    <meta name="keywords" content="eyerest support, eye break app help, 20-20-20 rule app, contact, FAQ">
+    <link rel="canonical" href="https://eyesaver.devsalah.com/support/">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Salah Alhaji">
+    <meta name="theme-color" content="#08090d">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <meta property="og:title" content="Support & Contact — EyeRest">
+    <meta property="og:description" content="Get help with EyeRest. FAQ, bug reports, and contact.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eyesaver.devsalah.com/support/">
+    <meta property="og:site_name" content="EyeRest">
+    <meta property="og:image" content="https://eyesaver.devsalah.com/og-image.svg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Support & Contact — EyeRest">
+    <meta name="twitter:description" content="Get help with EyeRest. FAQ, bug reports, and contact.">
+    <meta name="twitter:image" content="https://eyesaver.devsalah.com/og-image.svg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Is EyeRest free?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes! EyeRest is free to download and use. Pro features are available as an optional upgrade." }
+            },
+            {
+                "@type": "Question",
+                "name": "What platforms does EyeRest support?",
+                "acceptedAnswer": { "@type": "Answer", "text": "EyeRest is available for macOS (menu bar app) and iPhone (with widgets, Live Activities, and Dynamic Island)." }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the 20-20-20 rule?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Every 20 minutes, look at something 20 feet (6 meters) away for 20 seconds. This helps reduce eye strain from screen use." }
+            },
+            {
+                "@type": "Question",
+                "name": "Does EyeRest sync between Mac and iPhone?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, EyeRest uses iCloud to sync your settings between Mac and iPhone automatically." }
+            },
+            {
+                "@type": "Question",
+                "name": "Does EyeRest collect my data?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No personal data is collected. EyeRest uses Aptabase for fully anonymous usage analytics. All your data stays on your device." }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .support { max-width: 760px; margin: 0 auto; padding: 100px 24px 80px; }
+        .support-hero { text-align: center; margin-bottom: 64px; }
+        .support-hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem); font-weight: 750;
+            letter-spacing: -0.03em; margin-bottom: 12px;
+        }
+        .support-hero h1 span {
+            background: linear-gradient(135deg, var(--blue), var(--cyan));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .support-hero p { color: var(--text-2); font-size: 1.05rem; max-width: 460px; margin: 0 auto; }
+
+        .section-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 20px; }
+
+        .contact-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px; margin-bottom: 64px;
+        }
+        .contact-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--r); padding: 24px; text-decoration: none;
+            color: var(--text); transition: all 0.3s ease; display: block;
+        }
+        .contact-card:hover { border-color: var(--border-h); background: var(--bg-card-h); transform: translateY(-2px); }
+        .contact-icon {
+            width: 40px; height: 40px; border-radius: 10px;
+            display: grid; place-items: center; margin-bottom: 14px;
+        }
+        .contact-icon svg { width: 20px; height: 20px; }
+        .ci-blue { background: rgba(91,156,246,0.12); color: var(--blue); }
+        .ci-green { background: rgba(72,187,120,0.12); color: var(--green); }
+        .ci-purple { background: rgba(159,122,234,0.12); color: var(--purple); }
+        .contact-card h3 { font-size: 0.95rem; font-weight: 650; margin-bottom: 4px; }
+        .contact-card p { font-size: 0.82rem; color: var(--text-2); line-height: 1.5; }
+
+        .faq-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 64px; }
+        .faq-item {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--r); overflow: hidden;
+        }
+        .faq-q {
+            width: 100%; background: none; border: none; color: var(--text);
+            font-family: inherit; font-size: 0.92rem; font-weight: 600;
+            text-align: left; padding: 18px 20px; cursor: pointer;
+            display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+            transition: background 0.2s;
+        }
+        .faq-q:hover { background: rgba(91,156,246,0.03); }
+        .faq-chev { font-size: 0.7rem; color: var(--text-3); transition: transform 0.3s ease; flex-shrink: 0; }
+        .faq-item.open .faq-chev { transform: rotate(180deg); }
+        .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+        .faq-item.open .faq-a { max-height: 300px; }
+        .faq-a-inner { padding: 0 20px 18px; font-size: 0.87rem; color: var(--text-2); line-height: 1.7; }
+        .faq-a-inner a { color: var(--cyan); }
+
+        .info-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+        }
+        .info-item {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--r); padding: 18px 20px;
+        }
+        .info-label {
+            font-size: 0.72rem; font-weight: 600; color: var(--text-3);
+            text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;
+        }
+        .info-value { font-size: 0.95rem; font-weight: 650; }
+
+        @media (max-width: 640px) {
+            .support { padding: 80px 16px 60px; }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="w">
+        <a href="/" class="n-brand">
+            <span class="n-logo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </span>
+            EyeRest
+        </a>
+        <ul class="n-links">
+            <li><a href="/" data-en="Home" data-de="Startseite">Home</a></li>
+            <li><a href="/support" data-en="Support" data-de="Support">Support</a></li>
+            <li>
+                <div class="lang-sw">
+                    <button onclick="setLang('en')" class="on" id="btn-en">EN</button>
+                    <button onclick="setLang('de')" id="btn-de">DE</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="support">
+    <div class="support-hero v">
+        <h1><span data-en="Support" data-de="Support">Support</span> & <span data-en="Contact" data-de="Kontakt">Contact</span></h1>
+        <p data-en="Have a question, found a bug, or want to suggest a feature? We're here to help." data-de="Hast du eine Frage, einen Bug gefunden oder einen Feature-Wunsch? Wir helfen gerne.">Have a question, found a bug, or want to suggest a feature? We're here to help.</p>
+    </div>
+
+    <h2 class="section-title v" data-en="Get in Touch" data-de="Kontaktiere uns">Get in Touch</h2>
+    <div class="contact-grid">
+        <a href="mailto:eyerest@devsalah.com" class="contact-card v">
+            <div class="contact-icon ci-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <h3 data-en="Email" data-de="E-Mail">Email</h3>
+            <p data-en="eyerest@devsalah.com — we usually reply within 24 hours." data-de="eyerest@devsalah.com — wir antworten in der Regel innerhalb von 24 Stunden.">eyerest@devsalah.com — we usually reply within 24 hours.</p>
+        </a>
+        <a href="mailto:eyerest@devsalah.com?subject=Bug%20Report%20-%20EyeRest" class="contact-card v">
+            <div class="contact-icon ci-purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 2l1.88 1.88"/><path d="M14.12 3.88L16 2"/><path d="M9 7.13v-1a3.003 3.003 0 116 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 014-4h4a4 4 0 014 4v3c0 3.3-2.7 6-6 6"/><path d="M12 20v2"/><path d="M6.53 9C4.6 8.8 3 7.1 3 5"/><path d="M6 13H2"/><path d="M3 21c0-2.1 1.7-3.9 3.8-4"/><path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"/><path d="M22 13h-4"/><path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"/></svg>
+            </div>
+            <h3 data-en="Report a Bug" data-de="Bug melden">Report a Bug</h3>
+            <p data-en="Found something broken? Let us know and we'll fix it." data-de="Etwas kaputt? Lass es uns wissen, wir reparieren es.">Found something broken? Let us know and we'll fix it.</p>
+        </a>
+        <a href="#" class="contact-card v">
+            <div class="contact-icon ci-green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h3 data-en="Rate & Review" data-de="Bewerten">Rate & Review</h3>
+            <p data-en="Love EyeRest? Leave a review on the App Store!" data-de="EyeRest gefällt dir? Hinterlasse eine Bewertung im App Store!">Love EyeRest? Leave a review on the App Store!</p>
+        </a>
+    </div>
+
+    <h2 class="section-title v" data-en="Frequently Asked Questions" data-de="Häufig gestellte Fragen">Frequently Asked Questions</h2>
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                <span data-en="Is EyeRest free?" data-de="Ist EyeRest kostenlos?">Is EyeRest free?</span>
+                <span class="faq-chev">&#9660;</span>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner" data-en="Yes! EyeRest is free to download and use. Pro features like Strict Mode, Calendar Sync, Custom Sounds, and Overlay Themes are available as an optional upgrade." data-de="Ja! EyeRest ist kostenlos. Pro-Features wie Strenger Modus, Kalender-Sync, Eigene Sounds und Overlay-Themes sind als optionales Upgrade verfügbar.">Yes! EyeRest is free to download and use. Pro features like Strict Mode, Calendar Sync, Custom Sounds, and Overlay Themes are available as an optional upgrade.</div></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                <span data-en="What platforms does EyeRest support?" data-de="Welche Plattformen unterstützt EyeRest?">What platforms does EyeRest support?</span>
+                <span class="faq-chev">&#9660;</span>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner" data-en="EyeRest is available for macOS (lives in your menu bar) and iPhone (with Home Screen widgets, Live Activities, Dynamic Island, and Lock Screen controls)." data-de="EyeRest ist verfügbar für macOS (lebt in der Menüleiste) und iPhone (mit Home Screen Widgets, Live Activities, Dynamic Island und Sperrbildschirm-Steuerung).">EyeRest is available for macOS (lives in your menu bar) and iPhone (with Home Screen widgets, Live Activities, Dynamic Island, and Lock Screen controls).</div></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                <span data-en="What is the 20-20-20 rule?" data-de="Was ist die 20-20-20 Regel?">What is the 20-20-20 rule?</span>
+                <span class="faq-chev">&#9660;</span>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner" data-en="Every 20 minutes, look at something 20 feet (about 6 meters) away for 20 seconds. This simple practice, recommended by ophthalmologists, helps reduce digital eye strain." data-de="Alle 20 Minuten 20 Sekunden lang auf etwas in 6 Metern Entfernung schauen. Diese einfache Übung wird von Augenärzten empfohlen und hilft, digitale Augenbelastung zu reduzieren.">Every 20 minutes, look at something 20 feet (about 6 meters) away for 20 seconds. This simple practice, recommended by ophthalmologists, helps reduce digital eye strain.</div></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                <span data-en="Does EyeRest sync between Mac and iPhone?" data-de="Synchronisiert EyeRest zwischen Mac und iPhone?">Does EyeRest sync between Mac and iPhone?</span>
+                <span class="faq-chev">&#9660;</span>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner" data-en="Yes! EyeRest uses iCloud to automatically sync your settings between Mac and iPhone. No account needed — just your Apple ID." data-de="Ja! EyeRest nutzt iCloud, um deine Einstellungen automatisch zwischen Mac und iPhone zu synchronisieren. Kein Account nötig — nur deine Apple ID.">Yes! EyeRest uses iCloud to automatically sync your settings between Mac and iPhone. No account needed — just your Apple ID.</div></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                <span data-en="Does EyeRest collect my data?" data-de="Sammelt EyeRest meine Daten?">Does EyeRest collect my data?</span>
+                <span class="faq-chev">&#9660;</span>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner" data-en="No personal data is collected. EyeRest uses Aptabase for fully anonymous, GDPR-compliant usage analytics. All your preferences and statistics stay on your device. Read our <a href='/privacy.html'>Privacy Policy</a> for details." data-de="Keine persönlichen Daten werden erfasst. EyeRest verwendet Aptabase für vollständig anonyme, DSGVO-konforme Nutzungsanalysen. Alle Einstellungen und Statistiken bleiben auf deinem Gerät. Lies unsere <a href='/privacy.html'>Datenschutzerklärung</a> für Details.">No personal data is collected. EyeRest uses Aptabase for fully anonymous, GDPR-compliant usage analytics. All your preferences and statistics stay on your device. Read our <a href="/privacy.html">Privacy Policy</a> for details.</div></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                <span data-en="Can I customize the timer?" data-de="Kann ich den Timer anpassen?">Can I customize the timer?</span>
+                <span class="faq-chev">&#9660;</span>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner" data-en="Yes! You can set work intervals from 1 to 60 minutes and rest periods from 5 to 120 seconds. The default follows the 20-20-20 rule (20 minutes work, 20 seconds break)." data-de="Ja! Du kannst Arbeitsintervalle von 1 bis 60 Minuten und Pausen von 5 bis 120 Sekunden einstellen. Standard ist die 20-20-20 Regel (20 Minuten Arbeit, 20 Sekunden Pause).">Yes! You can set work intervals from 1 to 60 minutes and rest periods from 5 to 120 seconds. The default follows the 20-20-20 rule (20 minutes work, 20 seconds break).</div></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                <span data-en="Does EyeRest pause during meetings?" data-de="Pausiert EyeRest bei Meetings?">Does EyeRest pause during meetings?</span>
+                <span class="faq-chev">&#9660;</span>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner" data-en="Yes! With the Calendar Sync Pro feature, EyeRest automatically skips breaks during meetings and events. It will never interrupt a call." data-de="Ja! Mit der Kalender-Sync Pro-Funktion überspringt EyeRest automatisch Pausen während Terminen und Events. Es unterbricht nie einen Call.">Yes! With the Calendar Sync Pro feature, EyeRest automatically skips breaks during meetings and events. It will never interrupt a call.</div></div>
+        </div>
+    </div>
+
+    <h2 class="section-title v" data-en="App Information" data-de="App-Informationen">App Information</h2>
+    <div class="info-grid">
+        <div class="info-item v">
+            <div class="info-label" data-en="App Name" data-de="App-Name">App Name</div>
+            <div class="info-value">EyeRest</div>
+        </div>
+        <div class="info-item v">
+            <div class="info-label">Developer</div>
+            <div class="info-value">Salah Alhaji</div>
+        </div>
+        <div class="info-item v">
+            <div class="info-label" data-en="Platforms" data-de="Plattformen">Platforms</div>
+            <div class="info-value">Mac & iPhone</div>
+        </div>
+        <div class="info-item v">
+            <div class="info-label" data-en="Price" data-de="Preis">Price</div>
+            <div class="info-value" data-en="Free (Pro optional)" data-de="Kostenlos (Pro optional)">Free (Pro optional)</div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="w">
+        <span class="f-left">&copy; 2025 EyeRest</span>
+        <ul class="f-links">
+            <li><a href="/" data-en="Home" data-de="Startseite">Home</a></li>
+            <li><a href="/support" data-en="Support" data-de="Support">Support</a></li>
+            <li><a href="/privacy.html" data-en="Privacy" data-de="Datenschutz">Privacy</a></li>
+            <li><a href="mailto:eyerest@devsalah.com" data-en="Contact" data-de="Kontakt">Contact</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script>
+let L = localStorage.getItem('lang') || 'en';
+function setLang(l) {
+    L = l; localStorage.setItem('lang', l);
+    document.documentElement.lang = l;
+    document.getElementById('btn-en').classList.toggle('on', l==='en');
+    document.getElementById('btn-de').classList.toggle('on', l==='de');
+    document.querySelectorAll('[data-en]').forEach(e => {
+        const t = e.getAttribute('data-'+l);
+        if(t) e.innerHTML = t;
+    });
+}
+const obs = new IntersectionObserver(es => {
+    es.forEach(e => { if(e.isIntersecting) e.target.classList.add('show'); });
+}, { threshold: 0.15 });
+document.querySelectorAll('.v').forEach(e => obs.observe(e));
+setLang(L);
+</script>
+</body>
+</html>
